@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { PedidoComponent } from './pedido/pedido.component';
 
+import 'rxjs/add/operator/map';
+
 @NgModule({
   declarations: [
     AppComponent,
