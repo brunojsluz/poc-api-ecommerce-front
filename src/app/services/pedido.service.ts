@@ -21,7 +21,7 @@ export class PedidoService {
   }
 
   public buscar(codigo: string): Observable<Pedido> {
-    return this.http.get(this.urlServico + '/busca/' + codigo).map(res => res.json());
+    return this.http.get(`${this.urlServico}/busca/${codigo}`).map(res => res.json());
   }
 
   public listar(): Observable<Pedido> {
