@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { PedidoComponent } from './pedido/pedido.component';
 
+import {ItemService} from './services/item.service';
+import {PedidoService} from './services/pedido.service';
+
 import 'rxjs/add/operator/map';
 
 @NgModule({
@@ -16,7 +19,7 @@ import 'rxjs/add/operator/map';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ItemService, PedidoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
