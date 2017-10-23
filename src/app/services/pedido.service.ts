@@ -25,7 +25,7 @@ export class PedidoService {
     return this.http.get(`${this.urlAPI}/busca/${codigo}`).map(res => res.json());
   }
 
-  public listar(): Observable<Pedido> {
+  public listar(): Observable<Pedido[]> {
     return this.http.get(this.urlAPI).map(res => res.json());
   }
 

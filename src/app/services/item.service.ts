@@ -26,11 +26,11 @@ export class ItemService {
     return this.http.get(`${this.urlAPI}/busca/${codigo}`).map(res => res.json());
   }
 
-  public buscarParcial(descricao: string): Observable<Item> {
+  public buscarParcial(descricao: string): Observable<Item[]> {
     return this.http.get(`${this.urlAPI}/busca/parcial/${descricao}`).map(res => res.json());
   }
 
-  public listar(): Observable<Item> {
+  public listar(): Observable<Item[]> {
     return this.http.get(this.urlAPI).map(res => res.json());
   }
 
