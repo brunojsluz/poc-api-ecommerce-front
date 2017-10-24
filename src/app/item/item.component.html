@@ -1,23 +1,24 @@
 <div class="container">
-  <h1 class="text-center">Listagem de filmes</h1>
+  <h1 class="text-center">Listagem de itens</h1>
   <br />
 
   <table class="table">
     <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Código</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Observação</th>
     </tr>
     </thead>
     <tbody>
-    <tr >
-      <th></th>
-      <th></th>
-      <th></th>
+    <tr *ngFor="let item of itens">
+      <th>{{item.codigo}}</th>
+      <th>{{item.descricao}}</th>
+      <th>{{item.valor | currency:'BRL':false}}</th>
+      <th>{{item.observacao}}</th>
       <th>
-        <button class="btn btn-danger" ></button>
+        <button mat-raised-button color="primary" (click)="abrirModal(item)">Alterar preço</button>
       </th>
     </tr>
     </tbody>

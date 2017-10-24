@@ -1,11 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
+import {ItemComponent} from './item/item.component';
+import {PedidoComponent} from './pedido/pedido.component';
 
 const appRoutes: Routes = [
-    { path: '', component: ListagemComponent },
-    { path: 'cadastro', component: CadastroComponent },
-    { path: 'cadastro/:codigo', component: CadastroComponent },
-    { path: 'cadastro-material', component: CadastroMaterialComponent },
-    { path: '**', component: ListagemComponent }
+    { path: '', component: ItemComponent },
+    { path: 'pedido', component: PedidoComponent },
+    { path: '**', component: ItemComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
