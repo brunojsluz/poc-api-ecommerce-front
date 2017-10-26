@@ -14,8 +14,8 @@ export class ItemComponent implements OnInit {
 
   private matDialog: MatDialog;
   private service: ItemService;
-  private itens: Item[];
-  private descricaoParcial: string;
+  public itens: Item[];
+  public descricaoParcial: string;
 
   constructor(service: ItemService, matDialog: MatDialog) {
     this.service = service;
