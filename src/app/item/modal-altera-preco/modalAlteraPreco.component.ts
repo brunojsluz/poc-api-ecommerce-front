@@ -7,7 +7,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 })
 export class ModalAlteraPrecoComponent {
 
-  private data: any;
+  public data: any;
   private dialog: MatDialogRef<ModalAlteraPrecoComponent>;
 
   constructor(dialogRef: MatDialogRef<ModalAlteraPrecoComponent>, @Inject(MAT_DIALOG_DATA) data: any) {
