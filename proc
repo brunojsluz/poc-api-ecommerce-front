@@ -1,0 +1,2 @@
+"preinstall": "npm install -g http-server",
+"postinstall": "ng build --prod"
