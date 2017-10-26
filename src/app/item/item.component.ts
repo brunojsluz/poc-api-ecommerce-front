@@ -7,13 +7,15 @@ import {AlteraPreco} from '../entidades/AlteraPreco';
 
 @Component({
   selector: 'app-item',
-  templateUrl: './item.component.html'
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
 
   private matDialog: MatDialog;
   private service: ItemService;
   private itens: Item[];
+  private descricaoParcial: string;
 
   constructor(service: ItemService, matDialog: MatDialog) {
     this.service = service;
@@ -24,6 +26,10 @@ export class ItemComponent implements OnInit {
     this.listarTodosItens();
   }
 
+  public pesquisar() {
+    this.service.buscarParcial(this.descricaoParcial).subscribe(itens => this.itens = itens);
+  }
+
   public abrirModal(item): void {
     const dialog = this.matDialog.open(ModalAlteraPrecoComponent, {
       width: '400px',
@@ -31,13 +37,18 @@ export class ItemComponent implements OnInit {
     });
 
     dialog.afterClosed().subscribe(result => {
-      console.log(result);
-      this.atualizaPreco({codigoItem: result.codigoItem, valor: parseInt(result.preco)});
+      this.atualizaPreco(result);
     });
   }
 
-  private atualizaPreco(preco: AlteraPreco) {
-    this.service.atualizarPreco(preco);
+  private atualizaPreco(result: any) {
+    const alteraPreco = new AlteraPreco();
+    alteraPreco.codigoItem = result.codigoItem;
+    alteraPreco.valor = parseFloat(result.preco);
+    this.service.atualizarPreco(alteraPreco).subscribe(res => {
+      console.log(res);
+      this.listarTodosItens();
+    });
   }
 
   private listarTodosItens(): void {

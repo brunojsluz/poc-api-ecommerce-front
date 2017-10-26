@@ -2,6 +2,15 @@
   <h1 class="text-center">Listagem de itens</h1>
   <br />
 
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Descrição" [(ngModel)]="descricaoParcial">
+    <div class="input-group-btn">
+      <button mat-raised-button color="primary" (click)="pesquisar()"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+  </div>
+
+  <br />
+
   <table class="table">
     <thead>
     <tr>
