@@ -27,7 +27,7 @@ export class ItemService {
   }
 
   public buscarParcial(descricao: string): Observable<Item[]> {
-    return this.http.get(`${this.urlAPI}/busca/parcial/${descricao}`)
+    return this.http.get(`${this.urlAPI}/busca/parcial?descricao=${descricao}`)
       .map(res => res.json());
   }
 
