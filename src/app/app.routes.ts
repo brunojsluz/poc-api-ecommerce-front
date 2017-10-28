@@ -1,11 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
-import {ItemComponent} from './item/item.component';
-import {PedidoComponent} from './pedido/pedido.component';
+import {AppComponent} from './app.component';
 
 const appRoutes: Routes = [
-    { path: '', component: ItemComponent },
-    { path: 'pedido', component: PedidoComponent },
-    { path: '**', component: ItemComponent }
+    { path: '', component: AppComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

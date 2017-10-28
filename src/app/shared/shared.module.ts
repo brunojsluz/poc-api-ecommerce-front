@@ -3,6 +3,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     MatButtonModule,
     MatDialogModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule {

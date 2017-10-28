@@ -7,6 +7,7 @@ import { ItemComponent } from './item.component';
 import { SharedModule } from '../shared/shared.module';
 
 import { ItemService } from '../services/item.service';
+import { ItemRoutingModule } from './item.routing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ItemService } from '../services/item.service';
   ],
 
   imports: [
-    SharedModule
+    SharedModule,
+    ItemRoutingModule
   ],
 
   exports: [
