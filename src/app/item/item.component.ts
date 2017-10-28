@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
 import { Item } from '../entidades/Item';
 import { MatDialog } from '@angular/material';
-import { ModalAlteraPrecoComponent } from './modal-altera-preco/modalAlteraPreco.component';
+import { ModalAlteraPrecoComponent } from './modal-altera-preco/modal-altera-preco.component';
 import {AlteraPreco} from '../entidades/AlteraPreco';
 
 @Component({

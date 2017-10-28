@@ -1,17 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpModule } from '@angular/http';
-import { MatButtonModule, MatDialogModule } from '@angular/material';
+import { ItemModule } from './item/item.module';
+import { PedidoModule } from './pedido/pedido.module';
 
 import { AppComponent } from './app.component';
-import { PedidoComponent } from './pedido/pedido.component';
-import { ItemComponent } from './item/item.component';
-import { ModalAlteraPrecoComponent } from './item/modal-altera-preco/modalAlteraPreco.component';
-
-import { ItemService } from './services/item.service';
-import { PedidoService } from './services/pedido.service';
 
 import { routing } from './app.routes';
 
@@ -21,21 +12,13 @@ import 'rxjs/add/operator/catch';
 @NgModule({
   declarations: [
     AppComponent,
-    PedidoComponent,
-    ItemComponent,
-    ModalAlteraPrecoComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     routing,
-    HttpModule,
-    FormsModule,
-    MatButtonModule,
-    MatDialogModule
+    ItemModule,
+    PedidoModule
   ],
-  entryComponents: [ ModalAlteraPrecoComponent ],
-  providers: [ ItemService, PedidoService ],
+  providers: [ ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -3,7 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'modal-altera-preco',
-  templateUrl: './modalAlteraPreco.component.html'
+  templateUrl: './modal-altera-preco.component.html'
 })
 export class ModalAlteraPrecoComponent {
 
