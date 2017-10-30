@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<h1>Lista de pedidos</h1>
 
-</body>
-</html>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Código</th>
+    <th>Cliente</th>
+    <th>Data do Pedido</th>
+    <th>Telefone</th>
+    <th>Valor Total do Pedido</th>
+    <th>Status do Pedido</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pedido of pedidos">
+    <th>{{pedido.codigo}}</th>
+    <th>{{pedido.cliente}}</th>
+    <th>{{pedido.dataPedido}}</th>
+    <th>{{pedido.telefone}}</th>
+    <th>{{pedido.valorTotalPedido | currency:'BRL':false}}</th>
+    <th>{{pedido.statusPedido}}</th>
+  </tr>
+  </tbody>
+</table>

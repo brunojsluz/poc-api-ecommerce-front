@@ -9,7 +9,7 @@ import {Pedido} from '../entidades/Pedido';
 export class PedidoComponent implements OnInit {
 
   private service: PedidoService;
-  private pedidos: Pedido[];
+  public pedidos: Pedido[];
 
   public constructor(service: PedidoService) {
     this.service = service;

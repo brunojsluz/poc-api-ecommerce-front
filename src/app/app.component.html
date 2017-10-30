@@ -1,29 +1,31 @@
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <header class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
-          <nav class="nav nav-masthead">
-            <a class="nav-link active" href="#">Itens</a>
-            <a class="nav-link" href="#">Pedido</a>
-            <a class="nav-link" href="#">Sair</a>
-          </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/pedido">Pedidos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">Itens</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" routerLink="/item" routerLinkActive="active">Listar todos os itens</a>
+          <a class="dropdown-item" routerLink="/item/cadastro" routerLinkActive="active">Incluir novo item</a>
+          <a class="dropdown-item" href="#">Pesquisar itens</a>
         </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <router-outlet></router-outlet>
-      </main>
-
-      <footer class="mastfoot">
-        <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        </div>
-      </footer>
-
-    </div>
-
+      </li>
+    </ul>
   </div>
+</nav>
 
-</div>
+<main role="main" class="container">
+  <router-outlet></router-outlet>
+</main><!-- /.container -->

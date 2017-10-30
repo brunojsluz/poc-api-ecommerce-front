@@ -1,6 +1,9 @@
 import {NgModule} from '@angular/core';
-import {PedidoComponent} from './pedido.component';
 import {SharedModule} from '../shared/shared.module';
+import {PedidoRoutingModule} from './pedido.routing.module';
+
+import {PedidoComponent} from './pedido.component';
+
 import {PedidoService} from '../services/pedido.service';
 
 @NgModule({
@@ -9,7 +12,8 @@ import {PedidoService} from '../services/pedido.service';
   ],
 
   imports: [
-    SharedModule
+    SharedModule,
+    PedidoRoutingModule
   ],
 
   exports: [

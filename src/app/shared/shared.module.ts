@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatDialogModule, MatInputModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -11,10 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   exports: [
     HttpModule,
     FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    BrowserModule,
-    BrowserAnimationsModule
+    MatInputModule
   ]
 })
 export class SharedModule {
