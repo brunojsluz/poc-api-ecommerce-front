@@ -3,7 +3,8 @@ import { ItemService } from '../services/item.service';
 import { Item } from '../entidades/Item';
 import { MatDialog } from '@angular/material';
 import { ModalAlteraPrecoComponent } from './modal-altera-preco/modal-altera-preco.component';
-import {AlteraPreco} from '../entidades/AlteraPreco';
+import { AlteraPreco } from '../entidades/AlteraPreco';
+import { Message } from 'primeng/primeng';
 
 @Component({
   selector: 'app-item',
@@ -16,6 +17,7 @@ export class ItemComponent implements OnInit {
   private service: ItemService;
   public itens: Item[];
   public descricaoParcial: string;
+  public aviso: Message[];
 
   constructor(service: ItemService, matDialog: MatDialog) {
     this.service = service;
@@ -48,7 +50,15 @@ export class ItemComponent implements OnInit {
     this.service.atualizarPreco(alteraPreco).subscribe(res => {
       console.log(res);
       this.listarTodosItens();
+    }, error => {
+       console.log(error.detalhes.valor);
+       this.exibirNotificacao(error.detalhes.valor);
     });
+  }
+
+  private exibirNotificacao(mensagem: string) {
+    this.aviso = [];
+    this.aviso.push({severity: 'error', summary: 'Error Message', detail: mensagem});
   }
 
   private listarTodosItens(): void {

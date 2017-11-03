@@ -42,8 +42,7 @@ export class ItemService {
   }
 
   private errorLog(error: Response | any) {
-    console.error(error.message || error);
-    return Observable.throw(error.message || error);
+    return Observable.throw(error.json());
   }
 
   private montarHeaders(): any {
