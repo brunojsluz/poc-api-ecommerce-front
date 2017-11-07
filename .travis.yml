@@ -1,7 +1,5 @@
 language: node_js
 
-before_script:
-  - npm install -g --silent @angular/cli
-   
-script: # the build step
+  
+script:
   - ng build --prod
