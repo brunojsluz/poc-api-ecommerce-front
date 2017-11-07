@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brunojsluz/poc-api-ecommerce-front.svg?branch=master)](https://travis-ci.org/brunojsluz/poc-api-ecommerce-front)
+
 ## POC API ECOMMERCE FRONT
 
 ### Objetivo
