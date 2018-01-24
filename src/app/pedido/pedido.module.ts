@@ -1,14 +1,16 @@
-import {NgModule} from '@angular/core';
-import {SharedModule} from '../shared/shared.module';
-import {PedidoRoutingModule} from './pedido.routing.module';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
+import { PedidoRoutingModule } from './pedido.routing.module';
 
-import {PedidoComponent} from './pedido.component';
+import { PedidoComponent } from './pedido.component';
+import { CadastraPedidoComponent } from './novo-pedido/cadastra-pedido.component';
 
-import {PedidoService} from '../services/pedido.service';
+import { PedidoService } from '../services/pedido.service';
 
 @NgModule({
   declarations: [
-    PedidoComponent
+    PedidoComponent,
+    CadastraPedidoComponent
   ],
 
   imports: [
